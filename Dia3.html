@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feliz Dia Dos Namorados</title>
+  <style>
+    body {
+      background-color: red;
+      margin: 0;
+      overflow: hidden;
+    }
+
+    .painel {
+      margin: auto;
+      background-color: white;
+      width: 500px;
+      height: 650px;
+      border-radius: 20px;
+      text-align: center;
+      padding-top: 30px;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      position: relative;
+      z-index: 1;
+    }
+
+    .qr-code {
+      margin-top: 15px;
+      width: 100px;
+    }
+
+    /* Corações */
+    .coracao {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: pink;
+      transform: rotate(45deg);
+      animation: cair 6s linear infinite;
+    }
+
+    .coracao::before,
+    .coracao::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: pink;
+      border-radius: 50%;
+    }
+
+    .coracao::before {
+      top: -10px;
+      left: 0;
+    }
+
+    .coracao::after {
+      left: -10px;
+      top: 0;
+    }
+
+    @keyframes cair {
+      0% {
+        transform: translateY(-10%) rotate(45deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(100vh) rotate(45deg);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <audio autoplay loop>
+    <source src="musica.mp3" type="audio/mpeg">
+    Seu navegador não suporta áudio.
+  </audio>
+
+  <div class="painel">
+    <h1>Feliz Dia dos Namorados</h1>
+    <img src="https://i.pinimg.com/originals/d4/65/89/d46589e62e342303f061fe39cf5f90b7.gif" alt="Coração" width="200">
+
+    <h2>
+      Te amo muito, meu amor. Você é a melhor coisa que já aconteceu na minha vida. <br>
+      Um raio de luz que me permitiu enxergar a beleza do mundo.
+    </h2>
+
+    <!-- QR Code embutido -->
+    <img class="qr-code" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAB3UlEQVR4nO2Yz0sDQRBFz4IhEIIcAouAgkD0KhACVAHEAGKAIWAFFApSxA6cAiEgpIzvnuZ2ZX1OqmfWZ/d3Z7X+/b+mYON3p8YWHBhAc1e9FGYXERYYhC2HoPPybE58Dw+FmcUJVkTLrxAW2FSCi/B0IMuKILHIDEL8fDCb+0wVRyGXkPKkUCr04g7iRZT9TLQLfME6hgI+L1GBZKQU1jF3A9J9T0rglNRV0Ugm3VvAmkzajZdxCRScVsDWGonULlM1U3QL9U4y2VZaGL/qrRYM5SN0DUiJQBuU1y5E7ksYt8LU5EB5L2Ls7ixYpUjXYjc+I1cLeJFh9wvA0YhXN15C9BxZfJ+oqLuGTPMJkM52zHGA/ExjHbZQiwOvMXyb8E7p6BN9trfL0
